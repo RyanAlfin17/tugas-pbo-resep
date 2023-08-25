@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('photo')->nullable();
-            $table->text('description');
-            $table->text('ingredient');
-            $table->text('instruction');
+            $table->longText('description');
+            $table->longText('ingredient');
+            $table->longText('instruction');
             $table->timestamps();
         });
     }

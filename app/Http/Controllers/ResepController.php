@@ -31,9 +31,9 @@ class ResepController extends Controller
     {
         // Validate the form data
         $validatedData = $request->validate([
-            'title' => 'required',
+            'title' => 'required|max:50',
             'photo' => 'nullable',
-            'description' => 'required|max:255', // Sesuaikan dengan batas karakter yang diizinkan
+            'description' => 'required', // Sesuaikan dengan batas karakter yang diizinkan
             'ingredient' => 'required',
             'instruction' => 'required',
         ]);
@@ -99,9 +99,9 @@ class ResepController extends Controller
 
         // Validate the updated form data
         $validatedData = $request->validate([
-            'title' => 'required',
+            'title' => 'required|max:50',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif', // Add any relevant validation rules
-            'description' => 'required|max:255',
+            'description' => 'required',
             'ingredient' => 'required',
             'instruction' => 'required',
         ]);

@@ -14,8 +14,12 @@
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->title }}</h5>
-                            <p class="card-text">{{ $item->description }}</p>
+                            <h5 class="card-title">
+                                {{ \Illuminate\Support\Str::limit($item->title, $limit = 150, $end = '...') }}
+                            </h5>
+                            <p class="card-text">
+                                {{ \Illuminate\Support\Str::limit($item->description, $limit = 150, $end = '...') }}
+                            </p>
                             <div class="button-container">
                                 <a href="{{ route('showresep', ['id' => $item->id]) }}" class="btn btn-primary">Detail</a>
                                 <a href="{{ route('editresep', ['id' => $item->id]) }}" class="btn btn-secondary">Edit</a>

@@ -12,8 +12,8 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="title" class="form-label">Nama Resep:</label>
-                            <input type="text" id="title" name="title" class="form-control" value="{{ $recipe->title }}"
-                                required>
+                            <input type="text" id="title" name="title" class="form-control"
+                                value="{{ $recipe->title }}" max="50" required>
                         </div>
                         <div class="col-md-6">
                             <label for="photo" class="form-label">Foto Makanan:</label>
@@ -44,6 +44,6 @@
                         </div>
                     </div>
                 </form>
-            </div>  
+            </div>
         </main>
     @endsection
